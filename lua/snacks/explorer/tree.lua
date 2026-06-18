@@ -126,6 +126,7 @@ function Tree:close(path)
   local node = self:find(dir)
   node.open = false
   node.expanded = false -- clear expanded state
+  self:close_all(node.path)
 end
 
 ---@param node snacks.picker.explorer.Node
